@@ -1,0 +1,131 @@
+\documentclass{article}
+
+\title{MEC85 Fall 2020 Notes}
+\author{Drake Lin}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage[compact]{titlesec}
+\onehalfspacing
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{1}
+\titlespacing*{\section}{0pt}{8 ex}{1 ex}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+    \section{Chapter 2: Vectors}
+    \subsection{Scalars}
+    Scalars are positive/negative values specified by magnitude (length, time)
+    
+    \subsection{Vectors}
+    Vectors have a magnitude + direction (force, position, moment)\\
+    3D vectors: $||A|| = \sqrt{A_x^2+A_y^2+A_z^2}$\\
+    Position vector: $\vec{AB} = (x_B-x_A)i + (y_B-y_A)i + (z_B-z_A)i$ \\
+    Dot product: $A*B = ||\vec{A}||||\vec{B}||cos\theta = A_xB_x + A_yB_y + A_zB_z$
+
+
+
+    \section{Chapter 3: Moment}
+
+    \subsection{Moment}
+    The tendency of body to rotate about point (torque)\\
+    $\vec{M_o} = \vec{r} x \vec{F} =
+        \begin{vmatrix}
+            \vec{i} & \vec{j} & \vec{k} \\ r_x & r_y & r_z \\ F_x & F_y & F_z
+        \end{vmatrix}$ 
+    
+    moment of a force $\vec{F}$ about position O
+
+    $\vec{r}$ = position vector directed from O to any point on line of action of F\\
+    Sum of many moments = $M_{Ro}=\sum \vec{r}x\vec{F}$\\
+    Moment of force about an axis = $\vec{M_a}=\vec{u_a}*rxF=M_a*\vec{u_a}=
+        \begin{vmatrix}
+            \vec{u_{ax}} & \vec{u_{ay}} & \vec{u_{az}} \\ r_x & r_y & r_z \\ F_x & F_y & F_z
+        \end{vmatrix}$ 
+    
+    \subsection{Cross Product}
+    $\vec{C}=\vec{A}x\vec{B}=(ABsin\theta)\vec{u}_c= 
+        \begin{vmatrix}
+            \vec{i} & \vec{j} & \vec{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z
+        \end{vmatrix}$
+
+    $c=ABsin\theta$ (magnitude)
+    
+    $\vec{u}_c$ = direction = right hand rule 
+
+    
+
+    \section{Chapter 4: Rigid Body}
+    Equilibrium of a rigid body: $\vec{F_x}=0, \vec{M_R}=0$
+
+    \subsection{Equilibrium in 2D}
+    Free Body Diagram: understand all the known/unknown forces + moments on the body \\
+    Support Reaction: prevents translation of body by exerting force, prevents rotation by providing moment\\
+    Common support reactions:
+    \begin{itemize}
+        \item roller:
+        \item pin:
+        \item fixed:
+    \end{itemize}
+    Other forces:
+    \begin{itemize}
+        \item Springs: $F=kx, x=\Delta l$ 
+        \item Friction: $F_s=u_sN$
+    \end{itemize}
+    Two force members: Forces applied only at 2 points of member. For the member to be in equilibrium, the forces must be the same magnitude, 
+    in the opposite direction of each other, but be in the same line of action.
+
+    \subsection{Equilibrium in 3D}
+    Common support reactions:
+    \begin{itemize}
+        \item roller:
+        \item ball and socket:
+        \item fixed:
+    \end{itemize}
+    Equations of Equilibrium:
+    $\begin{cases}
+        \sum F_x = 0 \\ \sum F_y = 0 \\ \sum F_z = 0
+    \end{cases}$
+    $\begin{cases}
+        \sum M_x = 0 \\ \sum M_y = 0 \\ \sum M_z = 0
+    \end{cases}$
+
+
+
+    \section{Chapter 5: Structural Analysis}
+    Designing structures. Goal = maximize bending stiffness: change material or structure\\
+    Bending stiffness = $R = \rho / \delta$ 
+    
+    \subsection{Trusses}
+    Trusses are structures designed to suport loads such as roofs or buildings. They are slender members and joined at endpoints with each other.
+    Its weight is minimized to maximize its strength to weight ratio. When analyzing trusses, we make 4 key assumptions:
+    \begin{itemize}
+        \item all loadings applied at joints
+        \item weight of bar ignored
+        \item joined together by smooth points
+        \item consists of two force members
+    \end{itemize}
+    For truss analysis:
+    \begin{enumerate}
+        \item determine support reactions
+        \item determine zero force members (members that carry zero force)
+        \item determine forces supported by individual members of truss
+    \end{enumerate}
+    
+    \subsection{Method of Joints}
+    With the method of joints, we evaluate individual joints or pin connections. We assume tension in members and solve by summing forces in the x-y direction.
+
+    \subsection{Method of Sections}
+    With the method of sections, we evaluate a section including multiple joints by cutting through structural members. This section must be in equilibrium so $\sum F=0$ and  $\sum M=0$. 
+    We cut a section to reduce the number of unknown variables.
+
+    
+
+    \section{Chapter 6: Center and Moment}
+    
+
+\end{document}
