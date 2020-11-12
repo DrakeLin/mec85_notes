@@ -3,14 +3,14 @@
 \title{MEC85 Fall 2020 Notes}
 \author{Drake Lin}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1.5in]{geometry}
 \usepackage{setspace}
 \usepackage{amsmath}
 \usepackage[compact]{titlesec}
 \onehalfspacing
 \setcounter{secnumdepth}{0}
 \setcounter{tocdepth}{1}
-\titlespacing*{\section}{0pt}{8 ex}{1 ex}
+\titlespacing*{\section}{0pt}{8ex}{1ex}
 
 \begin{document}
     \maketitle
@@ -57,10 +57,12 @@
     
     $\vec{u}_c$ = direction = right hand rule 
 
-    
+    \newpage
 
     \section{Chapter 4: Rigid Body}
-    Equilibrium of a rigid body: $\vec{F_x}=0, \vec{M_R}=0$
+    Equilibrium of a rigid body: $\vec{F_x}=0, \vec{M_R}=0$\\
+    Two force members: Forces applied only at 2 points of member. For the member to be in equilibrium, the forces must be the same magnitude, 
+    in the opposite direction of each other, but be in the same line of action.
 
     \subsection{Equilibrium in 2D}
     Free Body Diagram: understand all the known/unknown forces + moments on the body \\
@@ -76,8 +78,13 @@
         \item Springs: $F=kx, x=\Delta l$ 
         \item Friction: $F_s=u_sN$
     \end{itemize}
-    Two force members: Forces applied only at 2 points of member. For the member to be in equilibrium, the forces must be the same magnitude, 
-    in the opposite direction of each other, but be in the same line of action.
+    Equations of Equilibrium:
+    $\begin{cases}
+        \sum F_x = 0 \\ \sum F_y = 0 
+    \end{cases}$
+    $\begin{cases}
+        \sum M = 0 
+    \end{cases}$
 
     \subsection{Equilibrium in 3D}
     Common support reactions:
@@ -94,7 +101,7 @@
         \sum M_x = 0 \\ \sum M_y = 0 \\ \sum M_z = 0
     \end{cases}$
 
-
+    \newpage
 
     \section{Chapter 5: Structural Analysis}
     Designing structures. Goal = maximize bending stiffness: change material or structure\\
@@ -123,9 +130,67 @@
     With the method of sections, we evaluate a section including multiple joints by cutting through structural members. This section must be in equilibrium so $\sum F=0$ and  $\sum M=0$. 
     We cut a section to reduce the number of unknown variables.
 
-    
+    \newpage
 
     \section{Chapter 6: Center and Moment}
+    The centroid of an area is the geometric center, denoted as $(\tilde{x},\tilde{y})$ 
     
+    \subsection{Center of Mass}
+    $\overline{x} = \frac{\int_{A} \tilde{x}dA}{\int_{A}dA}, \overline{y} = \frac{\int_{A} \tilde{y}dA}{\int_{A}dA}$
+    \begin{center}
+        \begin{tabular}{c|c}
+            Case 1: Vertical & Case 2: Horizontal \\
+            \hline 
+            $\tilde{x} = x$ & $\tilde{x} = \frac{x}{2}$ \\
+            $\tilde{y} = \frac{y}{2}$ & $\tilde{y} = y$ \\
+            $dA = ydx$ & $dA = xdy$ \\
+        \end{tabular}
+    \end{center}
+    Composite bodies: connected, simpler parts can be added together with the following formula to find the center of mass of a more complex shape.
+    $\overline{x} = \frac{\sum \tilde{x}A}{\sum A}, \overline{y} = \frac{\sum \tilde{y}A}{\sum A}$
 
-\end{document}
+    \subsection{Moment of Inertia}
+    Moment of inertia is the quantity that determines the torque needed for a desired angular acceleration about a rotational axis (just like how mass relates force and acceleration)\\
+    Equations: 
+    \begin{itemize}
+        \item $I_x = \int_{A}y^2dA$
+        \item $I_y = \int_{A}x^2dA$
+        \item $J_o = \int_{A}r^2dA = I_x + I_y $ (polar moment of inertia)
+    \end{itemize}
+    The Parallel Axis Theorem lets us solve for the moment of inertia, then shift it to some point.
+    \begin{itemize}
+        \item $I_x = \tilde{I_x} + Ady^2$
+        \item $I_y = \tilde{I_y} + Adx^2$
+        \item $J_o = \tilde{J_c} + Ad^2$
+    \end{itemize}
+
+    \newpage
+
+    \section{Chapter 7: Stress and Strain}
+    Normal Force (N): force $\perp$ to area \\
+    Shear Force (v): force that lies in plane of area \\
+    Bending Moment (m): bend of body across axis, moment caused by external loads\\
+    Factor of safety = $\frac{F_{fail}}{F_{allowable}}$\\
+    Deformation: When force is applied to a body, it tends to change the body's shape and size
+
+    \subsection{Stress}
+    $\sigma = \frac{N}{A}$; Average Force = Internal resultant normal force / Area \\
+    $T_{avg} = \frac{V}{A}$; Shear force of section = Shear force / Area of section
+    
+    \subsection{Strain}
+    $\sigma = \frac{L-L_o}{L_o}=\frac{\delta}{L_o}$; strain = change of length / initial length \\
+    $\gamma= \frac{\pi}{2} - \theta$; Shear strain  of section 
+
+    \subsection{Small strain analysis}
+    Small strain analysis is used when the $\Delta \theta$ is small
+    \begin{itemize}
+        \item $sin\Delta\theta\approx\Delta\theta$
+        \item $cos\Delta\theta\approx 1$
+        \item $tan\Delta\theta\approx\Delta\theta$
+    \end{itemize}
+    
+    \newpage
+
+    \section{Chapter 8: Mechanical Loads}
+
+    \end{document}

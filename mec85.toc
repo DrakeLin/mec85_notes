@@ -4,11 +4,18 @@
 \contentsline {section}{Chapter 3: Moment}{2}{}%
 \contentsline {subsection}{Moment}{2}{}%
 \contentsline {subsection}{Cross Product}{2}{}%
-\contentsline {section}{Chapter 4: Rigid Body}{2}{}%
-\contentsline {subsection}{Equilibrium in 2D}{2}{}%
+\contentsline {section}{Chapter 4: Rigid Body}{3}{}%
+\contentsline {subsection}{Equilibrium in 2D}{3}{}%
 \contentsline {subsection}{Equilibrium in 3D}{3}{}%
-\contentsline {section}{Chapter 5: Structural Analysis}{3}{}%
-\contentsline {subsection}{Trusses}{3}{}%
+\contentsline {section}{Chapter 5: Structural Analysis}{4}{}%
+\contentsline {subsection}{Trusses}{4}{}%
 \contentsline {subsection}{Method of Joints}{4}{}%
 \contentsline {subsection}{Method of Sections}{4}{}%
-\contentsline {section}{Chapter 6: Center and Moment}{4}{}%
+\contentsline {section}{Chapter 6: Center and Moment}{5}{}%
+\contentsline {subsection}{Center of Mass}{5}{}%
+\contentsline {subsection}{Moment of Inertia}{5}{}%
+\contentsline {section}{Chapter 7: Stress and Strain}{6}{}%
+\contentsline {subsection}{Stress}{6}{}%
+\contentsline {subsection}{Strain}{6}{}%
+\contentsline {subsection}{Small strain analysis}{6}{}%
+\contentsline {section}{Chapter 8: Mechanical Loads}{7}{}%
